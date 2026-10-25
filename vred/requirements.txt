@@ -1,0 +1,11 @@
+# Install a CUDA-compatible PyTorch build separately for the target node.
+torch>=2.4
+transformers==4.51.0
+tokenizers>=0.21,<0.22
+numpy
+safetensors
+tqdm
+tensorboard
+# Legacy evaluation converters:
+pandas
+openpyxl

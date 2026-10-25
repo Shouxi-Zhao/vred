@@ -1,0 +1,29 @@
+{
+  "precision": "bfloat16",
+  "save_every_steps": 1000,
+  "write_loss_type": "smoothl1",
+  "write_vocab_reduction": "sum",
+  "smoothl1_beta": 1.0,
+  "effect_kl_eta": 0.000001,
+  "tau_write": 1.0,
+  "tau_logits": 1.0,
+  "query_chunk_size": 32,
+  "ce_chunk_size": 32,
+  "probe_vocab_chunk_size": 16384,
+  "write_position_limit": null,
+  "checkpoint_probes": true,
+  "sparse_logits": true,
+  "gradient_checkpointing": false,
+  "selective_checkpointing": false,
+  "weight_decay": 0.0,
+  "max_grad_norm": 1.0,
+  "warmup_ratio": 0.03,
+  "epochs": 1,
+  "micro_batch_size": 1,
+  "num_workers": 0,
+  "stages": {
+    "dpt": {"pairs": 3, "lambda_write": 1.0, "lambda_logits": 0.0, "lr": 0.001, "accumulation": 32},
+    "sft": {"pairs": 0, "lambda_write": 0.0, "lambda_logits": 0.0, "lr": 0.00002, "accumulation": 16},
+    "dft": {"pairs": 6, "lambda_write": 1.0, "lambda_logits": 1.0, "lr": 0.00002, "accumulation": 16}
+  }
+}

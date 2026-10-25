@@ -1,0 +1,78 @@
+{
+  "root": "eval_dataset/eval",
+  "benchmarks": {
+    "gqa": {
+      "directory": "gqa",
+      "questions": "llava_gqa_testdev_balanced.jsonl",
+      "format": "jsonl",
+      "scoring": "local",
+      "annotations": "questions1.2/testdev_balanced_questions.json",
+      "images": "images"
+    },
+    "scienceqa": {
+      "directory": "scienceqa",
+      "questions": "llava_test_CQM-A.json",
+      "format": "scienceqa",
+      "scoring": "local",
+      "images": "images/test"
+    },
+    "textvqa": {
+      "directory": "textvqa",
+      "questions": "llava_textvqa_val_v051_ocr.jsonl",
+      "format": "jsonl",
+      "scoring": "local",
+      "images": "train_images"
+    },
+    "pope": {
+      "directory": "pope",
+      "questions": "llava_pope_test.jsonl",
+      "format": "jsonl",
+      "scoring": "local",
+      "images": "val2014"
+    },
+    "mme": {
+      "directory": "MME",
+      "questions": "llava_mme.jsonl",
+      "format": "jsonl",
+      "scoring": "local",
+      "images": "MME_Benchmark_release_version"
+    },
+    "mmmu": {
+      "directory": "MMMU",
+      "questions": "anns_for_eval.json",
+      "format": "mmmu",
+      "scoring": "local",
+      "images": "all_images"
+    },
+    "vqav2": {
+      "directory": "vqav2",
+      "questions": "llava_vqav2_mscoco_val2014.jsonl",
+      "format": "jsonl",
+      "scoring": "local",
+      "annotations": "v2_mscoco_val2014_annotations.json",
+      "images": "val2014"
+    },
+    "vizwiz": {
+      "directory": "vizwiz",
+      "questions": "llava_val.jsonl",
+      "format": "jsonl",
+      "scoring": "local",
+      "annotations": "Annotations/val.json",
+      "images": "val"
+    },
+    "mmbench": {
+      "directory": "mmbench",
+      "questions": "MMBench_DEV_EN_legacy.tsv",
+      "format": "tsv",
+      "scoring": "local",
+      "images": "images"
+    },
+    "mmbench_cn": {
+      "directory": "mmbench_cn",
+      "questions": "MMBench_DEV_CN_legacy.tsv",
+      "format": "tsv",
+      "scoring": "local",
+      "images": "images"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+# VRED 运行环境依赖（固定版本）
+#
+# 验证环境：Python 3.10.19 / Linux x86_64 / CUDA 12.4
+# 所列版本与已跑通训练的 nnunet 环境完全一致，请勿随意升级。
+#
+# 注意：transformers 与 tokenizers 是强绑定关系，
+#       4.45.x 配 tokenizers 0.20.x，4.51.x 才配 0.21.x。
+#       改其中一个必须同步改另一个，否则会在 AutoProcessor 处报错。
+
+# ---------- PyTorch（CUDA 12.4 构建）----------
+# 显式写 +cu124 本地标签，避免 pip 从 PyPI 装成默认的 cu121 构建。
+# 如目标机器驱动不支持 CUDA 12.4，改成对应的 cu 版本即可，其余包不受影响。
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.4.0+cu124
+torchvision==0.19.0+cu124
+
+# ---------- 核心依赖（训练与推理必需）----------
+transformers==4.45.0
+tokenizers==0.20.3
+numpy==1.26.4
+safetensors==0.8.0
+tqdm==4.67.1
+pillow==12.1.0
+
+# ---------- 训练必需 ----------
+tensorboard==2.20.0
+deepspeed==0.14.4
+
+# ---------- 评测可选（仅部分转换器使用）----------
+# pandas: VQA 风格的 tsv 标注读取；openpyxl: MMBench 的 xlsx 读取
+# 只跑训练与推理可以不装，跑完整评测时再补
+pandas==2.3.3
+openpyxl==3.1.5

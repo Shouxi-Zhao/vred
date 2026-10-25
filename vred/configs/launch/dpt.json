@@ -1,0 +1,6 @@
+{
+  "gpus": 6, "seed": 1234,
+  "foundation_config": "vred/configs/foundation.json",
+  "training_config": "vred/configs/training.json",
+  "input_model": null, "resume": null, "output": "checkpoints/vred/dpt"
+}

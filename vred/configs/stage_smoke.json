@@ -1,0 +1,11 @@
+{
+  "student": {
+    "hidden_size": 32, "intermediate_size": 64, "num_hidden_layers": 24,
+    "num_attention_heads": 4, "num_key_value_heads": 2, "tie_word_embeddings": true
+  },
+  "teacher": {
+    "hidden_size": 48, "intermediate_size": 96, "num_hidden_layers": 36,
+    "num_attention_heads": 6, "num_key_value_heads": 2, "tie_word_embeddings": true
+  },
+  "reconstruction_relative_l2": {"bfloat16": 0.02, "float32": 0.00001}
+}
